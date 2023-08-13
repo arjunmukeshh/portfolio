@@ -24,4 +24,16 @@
 <script src="runtime.4780622838e52590.js" type="module"></script><script src="polyfills.0c6fabbddaa85b8b.js" type="module"></script><script src="scripts.813213362642cfa0.js" defer></script><script src="main.c5566902391239ba.js" type="module"></script></body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
 </script>
+      <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
 </html>
